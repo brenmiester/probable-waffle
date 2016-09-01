@@ -1,0 +1,59 @@
+<html>
+<body>
+<h1> Scrolling text </h1>
+<br />
+<div id=cs1> </div><br />
+<div id=cs2> </div><br />
+<div id=cs3> </div><br />
+<div id=cs4> </div><br />
+<div id=cs5> </div><br />
+<div id=cs6> </div><br />
+<div id=cs7> </div><br />
+<div id=cs8> </div><br />
+<div id=cs9> </div><br />
+<div id=cs10> </div><br />
+<script>
+var cs1 = ' '
+cs2 = ' '
+cs3 = ' '
+cs4 = ' '
+cs5 = ' '
+cs6 = ' '
+cs7 = ' '
+cs8 = ' '
+cs9 = ' '
+cs10 = ' '
+add = ' '
+function addtext() {
+ document.getElementById(addtext).value = add
+ cs1 = cs2;
+ cs2 = cs3;
+ cs3 = cs4;
+ cs4 = cs5;
+ cs5 = cs6;
+ cs6 = cs7;
+ cs7 = cs8;
+ cs8 = cs9;
+ cs9 = cs10;
+ cs10 = add;
+ document.getElementById('cs1').innerHTML = cs1;
+ document.getElementById('cs2').innerHTML = cs2;
+ document.getElementById('cs3').innerHTML = cs3;
+ document.getElementById('cs4').innerHTML = cs4;
+ document.getElementById('cs5').innerHTML = cs5;
+ document.getElementById('cs6').innerHTML = cs6;
+ document.getElementById('cs7').innerHTML = cs7;
+ document.getElementById('cs8').innerHTML = cs8;
+ document.getElementById('cs9').innerHTML = cs9;
+ document.getElementById('cs10').innerHTML = cs10;
+ console.log(add + ' was printed');
+}
+</script>
+<p>Add some text here :)</p>
+<form onsubmit='addtext()'>
+<input type=’text’ name=’addtext’>
+<input type='submit' name='submit'>
+</form>
+</body>
+</html>
+
