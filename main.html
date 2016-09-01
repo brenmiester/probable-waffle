@@ -1,9 +1,6 @@
 <html>
-<head>
- <title>Scrolling Text</title>
-</head>
-<body id="main">
-<p>Add some text here :)</p>
+<body>
+<p>Enter commands here:</p>
 <form onsubmit="return addtext()">
 <input type=’text’ id=’addtext’>
 <input type='submit' id='submit'>
@@ -19,8 +16,12 @@
  cs8 = ' '
  cs9 = ' '
  cs10 = ' '
+ damage = 0
+ health = 20
+ maxhealth = 40
+ sucessrate = 0.2
  function addtext() {
-  var add = document.getElementById("addtext").value
+  add = document.getElementById("addtext").value
   cs1 = cs2;
   cs2 = cs3;
   cs3 = cs4;
@@ -42,6 +43,18 @@
   document.getElementById('cs9').innerHTML = cs9;
   document.getElementById('cs10').innerHTML = cs10;
   console.log(add + ' was printed');
+ }
+ function attack(damage, entityhealth) {
+ 
+ }
+ function spcast(spell){
+  if spell = "Fireball"
+   var rndtest = math.random()
+   if rndtest > successrate
+    health = health - 15
+   else
+    attack(15)
+    
  }
 </script>
 </body>
