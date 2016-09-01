@@ -1,7 +1,14 @@
 <html>
 <head>
- <script>
- document.getElementById('main').innerHTML = "<h1> Loading... </h1>"
+ <title>Scrolling Text</title>
+</head>
+<body id="main">
+<p>Add some text here :)</p>
+<form onsubmit="return addtext()">
+<input type=’text’ id=’addtext’>
+<input type='submit' id='submit'>
+</form>
+<script>
  var cs1 = ' '
  cs2 = ' '
  cs3 = ' '
@@ -12,9 +19,8 @@
  cs8 = ' '
  cs9 = ' '
  cs10 = ' '
- add = ' '
  function addtext() {
-  document.getElementById('addtext').value = add
+  var add = document.getElementById("addtext").value
   cs1 = cs2;
   cs2 = cs3;
   cs3 = cs4;
@@ -38,24 +44,5 @@
   console.log(add + ' was printed');
  }
 </script>
-</head>
-<body id="main">
-<h1> Scrolling text </h1>
-<br />
-<div id=cs1> </div><br />
-<div id=cs2> </div><br />
-<div id=cs3> </div><br />
-<div id=cs4> </div><br />
-<div id=cs5> </div><br />
-<div id=cs6> </div><br />
-<div id=cs7> </div><br />
-<div id=cs8> </div><br />
-<div id=cs9> </div><br />
-<div id=cs10> </div><br />
-<p>Add some text here :)</p>
-<form onsubmit='addtext()'>
-<input type=’text’ name=’addtext’>
-<input type='submit' name='submit'>
-</form>
 </body>
 </html>
