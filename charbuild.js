@@ -34,10 +34,10 @@ add("The monk has trained their entire life to master the art of Goju-Ryu, and c
 var usr.class = query("So, " + usr.charname + ", Which will it be? Warrior, Mage, Archer or Monk?")
 if usr.class = "Warrior" or 'warrior'
   var usr.spells = false
-  usr.health = 25
-  usr.maxhealth = 50
+  usr.health = 35
+  usr.maxhealth = 70
   usr.successrate = 0.3
-  usr.strengthmod = 1.2
+  usr.strengthmod = 1.5
   usr.intelmod = 0.8
   usr.cunmod = 1
   usr.inv = ['Sword of Gallahad',
@@ -80,3 +80,58 @@ if usr.class = "Mage" or 'mage'
   ' ',
   ' ']
   usr.gold = 350
+if usr.class = "Archer" or 'archer'
+  var usr.spells = false
+  usr.health = 20
+  usr.maxhealth = 40
+  usr.successrate = 0.1
+  usr.strengthmod = 1
+  usr.intelmod = 1.2
+  usr.cunmod = 1.3
+  usr.arrows = 50
+  usr.inv = ['Longbow of the Long Winter',
+  'Potion of Vision',
+  'Chestplate of ' + rndadj(),
+  'Boots of ' + rndadj(),
+  'Shield of ' + rndadj(),
+  'Shortbow of ' + rndadj(),
+  'Arrows',
+  ' ',
+  ' ',
+  ' ',
+  ' ',
+  ' ',
+  ' ',
+  ' ',
+  ' ']
+  usr.gold = 250
+  if usr.class = "Monk" or 'monk'
+  var usr.spells = true
+  usr.health = 30
+  usr.maxhealth = 60
+  usr.successrate = 0.1
+  usr.strengthmod = 1.2
+  usr.intelmod = 1.3
+  usr.cunmod = 1.5
+  usr.inv = ['Nunchucks',
+  'Potion of Intelligence',
+  'Arnis Sticks of ' + rndadj(),
+  'Gi of ' + rndadj(),
+  'Belt of ' + rndadj(),
+  'Katana of ' + rndadj(),
+  ' ',
+  ' ',
+  ' ',
+  ' ',
+  ' ',
+  ' ',
+  ' ',
+  ' ',
+  ' ']
+  usr.gold = 150
+  add("So, " + usr.charname + ", you decided to follow the route of the " + usr.class + ".")
+  add("Health: " + usr.health)
+  add("Maximum health: " + usr.maxhealth)
+  add("Inventory: " + usr.inv)
+  add(usr.charname + ", your journey awaits...")
+  gamestart()
