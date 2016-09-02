@@ -9,9 +9,17 @@
  cs9 = ' '
  cs10 = ' '
  damage = 0
- health = 20
- maxhealth = 40
- sucessrate = 0.2
+ usr = ' '
+ usr.charname = ' '
+ usr.class = ' '
+ usr.spells = false
+ usr.health = 20
+ usr.maxhealth = 40
+ usr.sucessrate = 0.2
+ entity = "Ork"
+ entity.health = 15
+ entity.attack = 5
+ entity.alive = True
  function addtext() {
   add = document.getElementById("addtext").value
   cs1 = cs2;
@@ -36,8 +44,19 @@
   document.getElementById('cs10').innerHTML = cs10;
   console.log(add + ' was printed');
  }
- function attack(damage, entityhealth) {
- 
+ function attack(damage) {
+ 	entity.health = entity.health - damage
+ 	if entity.health < 0
+ 		entity.alive = false
+ 	else 
+ 	usrattack()
+ }
+  function usrattack(damage) {
+ 	usr.health = usr.health - damage
+ 	if usr.health < 0
+ 		endgame()
+ 	else 
+ 		attackprompt()
  }
  function spcast(spell){
   if spell = "Fireball"
@@ -46,5 +65,4 @@
     health = health - 15
    else
     attack(15)
-    
  }
